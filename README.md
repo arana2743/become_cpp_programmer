@@ -38,3 +38,23 @@
   - Class
   - Typedef
 
+### 2. Data type modifiers in C++
+> Data type modifiers are used with primitive data types to change the meaning of predefined data types according to the situation.
+
+2.1. long
+  - used to increase length of a data type to double in bytes like example long int (will be 8 bytes from usual 4 bytes) and long double (will be 16 bytes from usual 8 bytes)
+  - can be used with int, long
+
+2.2. short
+  - used to decrease length of a data type by 2 bytes
+  - can be used with int
+
+2.3. unsigned
+  - allows to store positive numbers only
+  - here bytes remain same , only thing is capacity is increased by double since now there is no signed bit
+  - can be used with int, char
+
+2.4. signed
+  - allows to store both negative and positive numbers
+  - can be used with int, char
+  - default behaviour of data types (for int and char)
