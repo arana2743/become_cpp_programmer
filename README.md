@@ -58,3 +58,16 @@
   - allows to store both negative and positive numbers
   - can be used with int, char
   - default behaviour of data types (for int and char)
+
+### 3. Bitwise operators in C++
+Bitwise operators are:
+  - '&' = bitwise AND
+  - '|' = bitwise OR
+  - '~' = bitwise NOT
+  - '>>' = bitwise right shift
+  - '<<' = bitwise left shift
+  - '^' = bitwise XOR
+
+> Right-shifting an operand1 >> operand2 is equivalent to dividing operand1 by (2 raise to power of operand2).
+
+> Left-shifting an operand1 << operand2 is equivalent to multiplying operand1 by (2 raise to power of operand2).
