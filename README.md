@@ -71,3 +71,7 @@ Bitwise operators are:
 > Right-shifting an operand1 >> operand2 is equivalent to dividing operand1 by (2 raise to power of operand2).
 
 > Left-shifting an operand1 << operand2 is equivalent to multiplying operand1 by (2 raise to power of operand2).
+
+### 4. Conditional statements in C++
+
+> Switch expression and case label accept variables of int or char data types.
