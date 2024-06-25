@@ -75,3 +75,9 @@ Bitwise operators are:
 ### 4. Conditional statements in C++
 
 > Switch expression and case label accept variables of int or char data types.
+
+### 5. Function overloading
+
+> Function overloading is the concept of affecting a function’s behavior based on the number of parameters or their types.
+
+> This way, functions with different parameters can coexist with the same name. Function overloading works with different parameters. The function prototype can change and the return type changes according to parameters being returned.
