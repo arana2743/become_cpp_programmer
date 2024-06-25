@@ -81,3 +81,50 @@ Bitwise operators are:
 > Function overloading is the concept of affecting a function’s behavior based on the number of parameters or their types.
 
 > This way, functions with different parameters can coexist with the same name. Function overloading works with different parameters. The function prototype can change and the return type changes according to parameters being returned.
+
+### 6. Lambda functions
+> lambdas are just function objects automatically created by the compiler.
+
+> A function object is an instance of a class for which the call operator, operator (), is overloaded. This means that a function object is an object that behaves like a function. The main difference between a function and a function object is that a function object is an object and can, therefore, have a state.
+
+6.1 Syntax: `[] () -> {...}`
+  - '[]' =>  
+    - captures the used variable
+  - '()' => 
+    - necessary for parameters
+    - optional
+  - '->' => 
+    - necessary for complex lambda functions
+    - optional
+  - '{}' => 
+    - function body, per default `const`
+    - `[]() mutable{...}` has a non-constant function body
+
+### 7. Closures
+> Lambda functions can bind their invocation context. This is perhaps the best feature of C++ lambdas.
+
+> Binding allows any variables passed in the surrounding scope(invocation context) to be passed to the lambda. This is what the [] in the beginning is for. Within these square brackets, we can specify which variables we want the lambda to capture.
+
+> The empty brackets we’ve used so far indicate that no variables should be bound.
+
+There are several types of bindings provided by C++ for lambda functions.
+PFB some of the bindings provided in C++:
+
+|     Bindings         |    Description                                  | 
+|----------------------|:------------------------------------------------| 
+| []                   | no binding                                      |
+| [a]                  | `a` per copy                                    |
+| [&a]                 | `a` per reference                               | 
+| [=]                  | all used variables per copy                     | 
+| [&]                  | all used variables per reference                | 
+| [=,&a]               | per default per copy; `a` per reference         | 
+| [&,a]                | per default per reference; a per copy           | 
+| [this]               | data and member of the enclosing class per copy |
+| [l= std::move(lock)] | moves lock (C++14)                              | 
+
+
+### 8. Generic lambda functions
+> With C++14, we have generic lambdas, which means that lambdas can deduce their argument types. Therefore, we can define a lambda expression such as `[](auto a, auto b){ return a + b; };`. 
+
+> The call operator becomes a template. Therefore to emphasize it explicitly: _a generic lambda is a function template._
+
