@@ -128,3 +128,17 @@ PFB some of the bindings provided in C++:
 
 > The call operator becomes a template. Therefore to emphasize it explicitly: _a generic lambda is a function template._
 
+### 9. Arrays
+There are two way to declara and initilize array in C++: 
+  - Approach 1 to declare and intialize:
+    - declaration : `DataType ArrayName [ArraySize]; `
+    - intialization: `ArrayName [ArrayIndex] = value; `
+  - Approach 2 to declare and initialize on same line:
+    - `DataType ArrayName [ ] = {value1,value2,...,valueN};`
+    - If we are initializing an array in the declaration step, we don’t need to specify the size of the array. _The compiler automatically determines its size_.
+
+> If we initialize an array with elements fewer than its total size, the compiler automatically initializes the remaining elements with their default values.
+
+> If you try to access an index that is greater than the size of an array, the compiler won’t generate an error, but may give you an unexpected output.
+
+> When initializing a 2-D array, specifying the first dimension is optional. The compiler will infer the number of rows from the statement. In the above program, changing `Student[3][3]` to `Student[][3]` is fine, but either `Student[][]` or `Student[3][]` **_isn’t valid_**.
