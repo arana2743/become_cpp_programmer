@@ -142,3 +142,39 @@ There are two way to declara and initilize array in C++:
 > If you try to access an index that is greater than the size of an array, the compiler won’t generate an error, but may give you an unexpected output.
 
 > When initializing a 2-D array, specifying the first dimension is optional. The compiler will infer the number of rows from the statement. In the above program, changing `Student[3][3]` to `Student[][3]` is fine, but either `Student[][]` or `Student[3][]` **_isn’t valid_**.
+
+### 10. Pointers
+In C++, pointers are variables that store the address of another variable.
+
+Pointer declaration
+  - To declare a variable as a pointer, it’s identifier must be preceded by an asterisk *.
+  - When we use * before the identifier, it indicates that the variable being declared is a pointer.
+    ```
+    DataType *idenitifier;
+    ```
+  - Above represents that the pointer `*identifier` will store address of variable of type `DataType`
+
+> It’s considered a best practice to set a pointer to `nullptr` when it is declared, unless it is initialized to some valid address
+
+> If we don’t initialize a pointer, it is automatically initialized to 0.
+
+> It’s a good practice to use `ptr` in a pointer’s variable name. It indicates that a variable is a pointer, and must be handled differently.
+
+> If we declare multiple pointers in the same line, we must use an asterisk `*` before each identifier.
+
+Pointer initialization
+  - To initialize a pointer, we must store the address in it. 
+  - The basic syntax for storing an address of another variable in the pointer variable is given below:
+    ```
+    ptrVariable = &Variable;
+    ```
+
+Address-of operator (`&`)
+  - The address-of operator (&) is a unary operator. It is used to extract the memory address of the variable.
+  - we cannot store the address of one variable into another variable e.g. 
+    ```
+    int num, address;
+    // below is wrong and will generate error
+    address = &num; 
+    ```
+  - upon reviewing above example, this is where pointer types come into picture and are useful.
