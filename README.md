@@ -150,7 +150,7 @@ Pointer declaration
   - To declare a variable as a pointer, it’s identifier must be preceded by an asterisk *.
   - When we use * before the identifier, it indicates that the variable being declared is a pointer.
     ```
-    DataType *idenitifier;
+    DataType *identifier;
     ```
   - Above represents that the pointer `*identifier` will store address of variable of type `DataType`
 
@@ -170,7 +170,7 @@ Pointer initialization
     ```
 
 Address-of operator (`&`)
-  - The address-of operator (&) is a unary operator. It is used to extract the memory address of the variable.
+  - The address-of operator (`&`) is a unary operator. It is used to extract the memory address of the variable.
   - we cannot store the address of one variable into another variable e.g. 
     ```
     int num, address;
@@ -178,3 +178,13 @@ Address-of operator (`&`)
     address = &num; 
     ```
   - upon reviewing above example, this is where pointer types come into picture and are useful.
+
+Dereferencing Operator
+  - The dereference operator `*` is a unary operator. It gives the value of the variable to which the pointer is pointing. This process is known as dereferencing a pointer.
+  - syntax: `* pointer_name;`
+
+> Trying to dereference an **_uninitialized_** or **_null pointer_** generates an error.
+
+### 11. References
+A reference is an alias for an existing variable. It can be created using the `&` operator.
+
