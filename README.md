@@ -188,3 +188,14 @@ Dereferencing Operator
 ### 11. References
 A reference is an alias for an existing variable. It can be created using the `&` operator.
 
+Reference vs Pointers
+  - A reference is never nullptr. Therefore, it must always be initialized by having an existing variable assigned to it.
+  The below code snippet will not work
+    ```
+    int &intRef;
+    int &intRef = nullptr;
+    ```
+  - References behave like constant pointers. 
+  - A reference always refers to its initial variable. 
+  - The value of the variable can change but the reference cannot be assigned to another variable.
+  - Like pointers, a reference can only be initialized by a variable of the same type.
